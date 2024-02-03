@@ -1,11 +1,12 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-
-        for i in range(0, len(nums)):
-            new = target - nums[i]
-            try:
-                second_index = nums.index(new, i+1, len(nums))
-            except ValueError:
-                continue
+        dict_1 = enumerate(nums)
+        dict_2 = {}
+        for keys, values in dict(dict_1).items():
+            complement = target - values
+            if complement in dict(dict_2).keys():
+                return dict_2[complement], keys
+            else:
+                dict_2[values] = keys 
             
-            return i, second_index
+        
