@@ -5,7 +5,7 @@ class Solution:
         
         for word in strs:
             
-            if tuple(sorted(word)) in  final_value:
+            if tuple(sorted(word)) in  final_value.keys():
                 final_value[tuple(sorted(word))].append(word)
             else:
                 final_value[tuple(sorted(word))] = [word]
