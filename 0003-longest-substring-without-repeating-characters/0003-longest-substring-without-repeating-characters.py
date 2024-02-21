@@ -13,7 +13,6 @@ class Solution:
                 max_len = max(i-j+1, max_len)
                 i = i+1
             else:
-                print(s[j])
                 set_.remove(s[j])
                 j += 1
                 
