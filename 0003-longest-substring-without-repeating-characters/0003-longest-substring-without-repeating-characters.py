@@ -2,11 +2,9 @@ class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         
         set_ = set()
-        count = 0
         max_len = 0
         j = 0
         i=0
-
         while(i<len(s)):
             if s[i] not in set_ :
                 set_.add(s[i])
@@ -15,9 +13,6 @@ class Solution:
             else:
                 set_.remove(s[j])
                 j += 1
-                
-    
-        
         return max_len
                 
                 
