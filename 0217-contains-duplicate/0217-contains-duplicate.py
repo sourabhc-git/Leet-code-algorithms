@@ -3,13 +3,10 @@ class Solution:
         
         new_set = set()
         
-        if (len(nums) <= 1):
-            return False
-        new_set.add(nums[0])
-        for index in range(1, len(nums)):
-            if nums[index] in new_set:
-                return True
+        for num in nums:
+            if num not in new_set:
+                new_set.add(num)
             else:
-                new_set.add(nums[index])
-        
+                return True
+            
         return False
