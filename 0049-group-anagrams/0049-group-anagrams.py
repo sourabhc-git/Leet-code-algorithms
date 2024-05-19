@@ -1,17 +1,16 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        
-        final_value = {}
-        
+        dict1 = {}
         for word in strs:
             
-            if tuple(sorted(word)) in  final_value.keys():
-                final_value[tuple(sorted(word))].append(word)
+            sorted_word =  ''.join(sorted(word))
+            if sorted_word in dict1:
+                dict1[sorted_word].append(word)
             else:
-                final_value[tuple(sorted(word))] = [word]
+                dict1[sorted_word] = [word]
         
-        
-        return list(final_value.values())
+        return dict1.values()
+            
                 
         
             
