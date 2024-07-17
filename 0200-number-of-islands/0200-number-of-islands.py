@@ -6,10 +6,8 @@ class Solution:
         rows, cols = len(grid), len(grid[0])
         
         def checkonsides(grid, i, j):
-                
             if i < 0 or j < 0 or i >= rows or j >= cols or grid[i][j] != '1':
                 return
-            
             grid[i][j] = '2'
             checkonsides(grid, i + 1, j)
             checkonsides(grid, i, j + 1)
