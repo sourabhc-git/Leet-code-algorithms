@@ -10,9 +10,6 @@ class Solution:
             
             final_answer.append(word1[i])
             final_answer.append(word2[i])
-        
-        if len(word1) == len(word2):
-            return "".join(final_answer)
 
         if n == len(word1):
             final_answer.extend(word2[n:])
