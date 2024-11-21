@@ -3,6 +3,7 @@ class Solution:
         
         if len(s1) > len(s2):
             return False
+        
         s1 = sorted(s1)
         
         
