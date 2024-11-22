@@ -1,23 +1,45 @@
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
         
+        hash_map_s1 = {}
+        hash_map_s2 = {}
+        
         if len(s1) > len(s2):
             return False
         
-        s1 = sorted(s1)
+        for i in range(0, len(s1)):
+            hash_map_s1[s1[i]] = hash_map_s1.get(s1[i], 0) + 1
+            hash_map_s2[s2[i]] = hash_map_s2.get(s2[i], 0) + 1
         
+        if hash_map_s1 == hash_map_s2:
+            return True
         
-        left = 0
-        right = len(s1)-1
-        
-        while (right != len(s2)):
-            if "".join(s1) in "".join(sorted(s2[left:right+1])):
+        for j in range(len(s1), len(s2)):
+            
+            start_element = (j - len(s1))
+            end_element = j
+            
+            hash_map_s2[s2[start_element]] = hash_map_s2.get(s2[start_element], 0) - 1
+            hash_map_s2[s2[end_element]] = hash_map_s2.get(s2[end_element], 0) +1
+            
+            if hash_map_s2[s2[start_element]] == 0:
+                del hash_map_s2[s2[start_element]]
+            
+            if hash_map_s1 == hash_map_s2:
                 return True
             
-            left +=1
-            right +=1
-        
+            
         return False
+            
+            
+            
+            
+        
+        
+            
+        
+            
+        
             
                 
             
