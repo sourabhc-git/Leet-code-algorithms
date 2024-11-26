@@ -15,7 +15,6 @@ class Solution:
         
         carry = 0
         
-        
         while l1 or l2 or carry:
             
             val1 = l1.val if l1 else 0
