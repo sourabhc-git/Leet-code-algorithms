@@ -1,35 +1,35 @@
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
         
-        hash_map_s1 = {}
-        hash_map_s2 = {}
-        
-        if len(s1) > len(s2):
+
+        n1 = len(s1)
+
+        n2 = len(s2)
+
+        if n1 > n2:
             return False
         
-        for i in range(0, len(s1)):
-            hash_map_s1[s1[i]] = hash_map_s1.get(s1[i], 0) + 1
-            hash_map_s2[s2[i]] = hash_map_s2.get(s2[i], 0) + 1
+        s1_values = [0] * 26
+        s2_values = [0] * 26
+
+        for  i in range(len(s1)):
+
+            s1_values[ord(s1[i]) - 97] += 1
+            s2_values[ord(s2[i]) - 97] +=1
         
-        if hash_map_s1 == hash_map_s2:
+        if s1_values == s2_values:
             return True
         
-        for j in range(len(s1), len(s2)):
-            
-            start_element = (j - len(s1))
-            end_element = j
-            
-            hash_map_s2[s2[start_element]] = hash_map_s2.get(s2[start_element], 0) - 1
-            hash_map_s2[s2[end_element]] = hash_map_s2.get(s2[end_element], 0) +1
-            
-            if hash_map_s2[s2[start_element]] == 0:
-                del hash_map_s2[s2[start_element]]
-            
-            if hash_map_s1 == hash_map_s2:
+        for j in range(n1, n2):
+
+            s2_values[ord(s2[j]) - 97] += 1
+            s2_values[ord(s2[j -n1]) - 97] -=1
+
+            if s1_values == s2_values:
                 return True
-            
-            
+        
         return False
+
             
             
             
