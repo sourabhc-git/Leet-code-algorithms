@@ -1,17 +1,12 @@
 class Solution:
-    def lengthOfLastWord(self, s: str) -> int:
+    def lengthOfLastWord(self, s: str) -> int:                
+        end = len(s) - 1
+
+        while s[end] == " ":
+            end -= 1
         
-        for var in range(len(s) - 1, -1 , -1):
-            
-            if s[var] != " ":
-                i = var
-                break
+        start = end
+        while start >= 0 and s[start] != " ":
+            start -= 1
         
-        j = i
-        counter = 0
-        while j >=0 and s[j] != " ":
-            counter = counter + 1
-            j = j - 1
-        
-        return counter
-        
+        return end - start
