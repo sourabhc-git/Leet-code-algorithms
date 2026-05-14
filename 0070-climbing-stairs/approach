@@ -1,0 +1,13 @@
+The climbing staircase problem can be solved using 
+Dynamic programming approach
+1. Top Down memoisation
+2. Bottom Up approach
+
+
+we can use any of it, it is kind of fibonacci problem.
+
+arr = [1,2 ,,,,,,,,,,,]
+
+all number next to 2 will be calculated based on previous 2 values.
+as base case is we can climb 1 stair with 1 jump
+and 2 stair with [1 + 1] and [2] so total ways 2
