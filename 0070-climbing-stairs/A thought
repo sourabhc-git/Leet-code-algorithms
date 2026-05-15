@@ -1,0 +1,9 @@
+DP questions are always solved based 
+on decision making with current cost and the previous max or min values at 
+
+
+min or max at that cost or index  = calculate on current index or cost + decision on previous min or max
+
+for ex:
+
+min_curr = curr_cost + min(min_curr - 1 , min_curr -2)
