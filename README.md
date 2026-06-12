@@ -22,6 +22,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0049-group-anagrams](https://github.com/sourabhc-git/Leet-code-algorithms/tree/main/0049-group-anagrams/) | Medium |
 | [0198-house-robber](https://github.com/sourabhc-git/Leet-code-algorithms/tree/main/0198-house-robber/) | Medium |
+| [0238-product-of-array-except-self](https://github.com/sourabhc-git/Leet-code-algorithms/tree/main/0238-product-of-array-except-self/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/sourabhc-git/Leet-code-algorithms/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0746-min-cost-climbing-stairs](https://github.com/sourabhc-git/Leet-code-algorithms/tree/main/0746-min-cost-climbing-stairs/) | Easy |
 ## Hash Table
@@ -58,4 +59,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0049-group-anagrams](https://github.com/sourabhc-git/Leet-code-algorithms/tree/main/0049-group-anagrams/) | Medium |
+## Prefix Sum
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0238-product-of-array-except-self](https://github.com/sourabhc-git/Leet-code-algorithms/tree/main/0238-product-of-array-except-self/) | Medium |
 <!---LeetCode Topics End-->
